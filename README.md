@@ -24,3 +24,10 @@ https://www.youtube.com/playlist?list=PLO56HZSjrPTBKn0sa6NBY6Nu0GA6Urh-Y
 
 Visual Studio 2019를 ASP.NET 워크로드를 추가한 후 설치한 상태에서 현재 리포지토리가 정상적으로 가동됩니다.
 
+
+## 버전
+
+닷넷 코어 3.1 ~ 닷넷 5.0 버전의 RedPlus 프로젝트는 다음 경로에 있습니다.
+
+https://github.com/VisualAcademy/RedPlus.V31
+
