@@ -7,7 +7,7 @@
 현재 프로젝트는 제 개인 홈페이지로 운영할 목적으로 강의가 진행됩니다.
 
 
-### "React.js Fundamentals 2022_React + ASP.NET Core 풀스택 입문 및 게시판 프로젝트" 강좌 재생 목록 
+### "React.js Fundamentals 2022: React.js와 .NET 6.0 풀스택 입문 및 게시판 프로젝트" 강좌 재생 목록 
 
 https://www.youtube.com/playlist?list=PLO56HZSjrPTCni63vlsruBQNeYMVatVAX
 
