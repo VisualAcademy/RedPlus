@@ -6,7 +6,7 @@ import { SiteList } from './Shared/SiteList/SiteList';
 export class Contact extends Component {
     render() {
         const title = "연락처.";
-        const message = "안녕하세요. ReactMemo 사이트입니다.";
+        const message = "안녕하세요. React.js 데모 사이트입니다.";
         return (
             <>
                 <h2>{title}</h2>

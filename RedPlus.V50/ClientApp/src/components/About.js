@@ -5,7 +5,7 @@ import { SiteList } from './Shared/SiteList/SiteList';
 export class About extends Component {
     render() {
         const title = "정보.";
-        const message = "안녕하세요. ReactMemo 사이트입니다.";
+        const message = "안녕하세요. React.js 데모 사이트입니다.";
         return (
             <>
                 <h2>{title}</h2>
