@@ -1,4 +1,4 @@
-// 3항 연산자를 사용하여 조건 처리
+﻿// 3항 연산자를 사용하여 조건 처리
 //import React, { Component } from 'react';
 import React from 'react';
 

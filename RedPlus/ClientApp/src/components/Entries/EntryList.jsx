@@ -1,4 +1,4 @@
-﻿// @page "/Entries/List"
+// @page "/Entries/List"
 import React, { Component } from 'react';
 import axios from 'axios';
 

@@ -1,4 +1,4 @@
-﻿// @page "/Entries/Details/:id"
+// @page "/Entries/Details/:id"
 import React, { Component } from 'react';
 import axios from 'axios';
 

@@ -1,4 +1,4 @@
-﻿// @page "/Entries/Create" 
+// @page "/Entries/Create" 
 import React, { Component } from 'react';
 import axios from 'axios';
 

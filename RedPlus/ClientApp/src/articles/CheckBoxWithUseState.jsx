@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 function CheckBoxWithUseState() {
     // useState를 사용하여 상태 데이터 관리 

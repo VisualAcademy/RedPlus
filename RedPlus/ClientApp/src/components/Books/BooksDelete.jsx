@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import axios from 'axios';
 
 export class BooksDelete extends React.Component {

@@ -1,4 +1,4 @@
-﻿// 구조 파괴 할당(Destructuring Assignment, 구조 분해 할당, 소멸 할당)
+// 구조 파괴 할당(Destructuring Assignment, 구조 분해 할당, 소멸 할당)
 import React from 'react';
 
 // 자식 1
