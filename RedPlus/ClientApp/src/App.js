@@ -10,21 +10,7 @@ import { ApplicationPaths } from './components/api-authorization/ApiAuthorizatio
 
 import './custom.css'
 
-// Entries
-import { EntryIndex } from './components/Entries/EntryIndex';
-import { EntryCreate } from './components/Entries/EntryCreate';
-import { EntryDetails } from './components/Entries/EntryDetails';
-import { EntryEdit } from './components/Entries/EntryEdit';
-import { EntryDelete } from './components/Entries/EntryDelete';
-import { EntryList } from './components/Entries/EntryList';
-
-// Articles
-import ReactRoadMap from './articles/ReactRoadMap';
-import MapAndKey from './articles/MapAndKey';
-import CheckBoxWithUseState from './articles/CheckBoxWithUseState';
-import { SearchBoxTest } from './articles/SearchBoxTest';
-
-// React Part 1
+// React Fundamentals 2022
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { HelloComponent } from './components/Demos/HelloComponent';
@@ -52,6 +38,20 @@ import UseEffectDemo from './components/Samples/UseEffectDemo';
 import UseEffectFetchApi from './components/Samples/UseEffectFetchApi';
 import TodoListInMemory from './components/TodoListInMemory';
 import { PropsTypesDemo } from './components/Demos/PropsTypesDemo/PropsTypesDemo';
+
+// Entries
+import { EntryIndex } from './components/Entries/EntryIndex';
+import { EntryCreate } from './components/Entries/EntryCreate';
+import { EntryDetails } from './components/Entries/EntryDetails';
+import { EntryEdit } from './components/Entries/EntryEdit';
+import { EntryDelete } from './components/Entries/EntryDelete';
+import { EntryList } from './components/Entries/EntryList';
+
+// Articles
+import ReactRoadMap from './articles/ReactRoadMap';
+import MapAndKey from './articles/MapAndKey';
+import CheckBoxWithUseState from './articles/CheckBoxWithUseState';
+import { SearchBoxTest } from './articles/SearchBoxTest';
 
 // Books 
 import { BooksIndex } from './components/Books/BooksIndex';
