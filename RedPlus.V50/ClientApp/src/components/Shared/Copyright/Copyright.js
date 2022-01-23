@@ -6,7 +6,7 @@ export class Copyright extends Component {
         const year = date.getFullYear();
         return (
             <div className="text-center">
-                Copyright &copy; {year * 1} <em>ReactMemo</em> all right reserved.
+                Copyright &copy; {year * 1} <em>ReactMemo</em> all rights reserved.
             </div>
         );
     }
