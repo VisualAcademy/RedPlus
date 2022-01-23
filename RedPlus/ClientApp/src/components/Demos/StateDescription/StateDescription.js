@@ -1,4 +1,4 @@
-﻿// StateDescription.js
+// StateDescription.js
 import React from 'react';
 
 class StateDescription extends React.Component {

@@ -1,4 +1,4 @@
-﻿// {{}} 형태를 사용하여 스타일 지정하기 
+// {{}} 형태를 사용하여 스타일 지정하기 
 import React from 'react';
 
 export class StyleAttribute extends React.Component {

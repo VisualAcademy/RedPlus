@@ -1,4 +1,4 @@
-﻿import React, { Component } from 'react';
+import React, { Component } from 'react';
 import { DulPagination } from '../Shared/DulPagination';
 
 export class PagerComponent7 extends Component {

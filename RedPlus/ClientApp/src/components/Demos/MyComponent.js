@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 
 const MyComponent = () => {
     return <h1>컴포넌트</h1>;

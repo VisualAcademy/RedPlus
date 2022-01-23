@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 // useState()를 사용하여 함수형 컴포넌트에서 상태 관리
 function FunctionStateDemo() {

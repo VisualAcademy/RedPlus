@@ -1,4 +1,4 @@
-﻿// OnClickEventHandler.js
+// OnClickEventHandler.js
 import React from "react";
 
 function btn_Click() {

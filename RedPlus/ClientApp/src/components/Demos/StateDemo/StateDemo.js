@@ -1,4 +1,4 @@
-﻿// StateDemo.js
+// StateDemo.js
 import React, { Component } from 'react';
 
 export class StateDemo extends Component {

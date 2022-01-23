@@ -1,4 +1,4 @@
-﻿// StateObjectLiteral.js
+// StateObjectLiteral.js
 import React, { Component } from 'react';
 
 export class StateObjectLiteral extends Component {
