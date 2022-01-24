@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { LoginMenu } from './api-authorization/LoginMenu';
@@ -32,33 +32,36 @@ export class NavMenu extends Component {
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
                             <ul className="navbar-nav flex-grow">
                                 <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
-                                </NavItem>
-                                <NavItem>
                                     <NavLink tag={Link} className="text-dark" to="/about">About</NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink tag={Link} className="text-dark" to="/contact">Contact</NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/Entries">Entries</NavLink>
-                                </NavItem>
                                 <li className="text-dark dropdown">
                                     <NavLink tag={Link} className="text-dark nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Examples
+                                        샘플 예제
                                     </NavLink>
                                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/">Home</NavLink>
+                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/About">About</NavLink>
+                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Contact">Contact</NavLink>
+                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Counter">Counter</NavLink>
+                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/fetch-data">Fetch data</NavLink>
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/ReactRoadMap">ReactRoadMap</NavLink>
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/MapAndKey">MapAndKey</NavLink>
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/CheckBoxWithUseState">CheckBoxWithUseState</NavLink>
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Pager">Pager Component</NavLink>
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/SearchBoxTest">SearchBox Component</NavLink>
+                                    </div>
+                                </li>
+                                <li className="text-dark dropdown">
+                                    <NavLink tag={Link} className="text-dark nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        미니 프로젝트
+                                    </NavLink>
+                                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/TodoListInMemory">TODO 리스트(인-메모리)</NavLink>
+                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Books">책 관리 앱 - CRUD 연습</NavLink>
+                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Entries">기본형 게시판(Entries)</NavLink>
                                     </div>
                                 </li>
                                 <LoginMenu>
