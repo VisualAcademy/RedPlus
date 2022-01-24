@@ -31,11 +31,14 @@ class TodoListInMemory extends React.Component {
         super();
         this.state = {
             todos: todoItems,
+            todoItem: ""
         };
 
         // 콜백에서 `this`가 작동하려면 아래와 같이 바인딩 해주어야 합니다.
         // https://ko.reactjs.org/docs/handling-events.html
         this.handleCheckedChange = this.handleCheckedChange.bind(this);
+        this.handleChangeTodoItem = this.handleChangeTodoItem.bind(this); 
+        this.handleChange = this.handleChange.bind(this); 
     }
 
     handleCheckedChange(id) {
@@ -52,6 +55,27 @@ class TodoListInMemory extends React.Component {
         });
     }
 
+    handleChangeTodoItem(e) {
+        this.setState({ todoItem: e.target.value });
+    }
+
+    handleChange(e) {
+        e.preventDefault(); // 이벤트 기본 작업 방지: 버튼, 링크 등의 고유 기능을 제거하고 React 기능만 사용
+
+        let todos = this.state.todos; // 현재 todos 상태 데이터 가져오기
+
+        let maxId = Math.max.apply(Math, todos.map(t => t.id)); // id 최댓값 가져오기 
+
+        // 새로운 TODO 항목 만들기 
+        let newTodo = { id: maxId + 1, title: this.state.todoItem, isDone: false };
+
+        // 상태 데이터에 추가 
+        todos.push(newTodo); 
+
+        // 상태 데이터 업데이트 
+        this.setState({todos: todos, todoItem: ""}); 
+    }
+
     render() {
         const todos = this.state.todos.map((todo) => <TodoItem key={todo.id} item={todo}
             handleCheckedChange={this.handleCheckedChange} />);
@@ -59,6 +83,14 @@ class TodoListInMemory extends React.Component {
         return (
             <>
                 <h3>초간단 인-메모리 TODO 리스트</h3>
+                <div>
+                    <form onSubmit={this.handleChange}>
+                        <input type="text" value={this.state.todoItem}
+                            onChange={this.handleChangeTodoItem}
+                        ></input>
+                        <input type="submit" value="Add"></input>
+                    </form>
+                </div>
                 <ul>
                     {todos}
                 </ul>
