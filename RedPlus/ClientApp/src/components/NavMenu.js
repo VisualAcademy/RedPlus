@@ -43,10 +43,12 @@ export class NavMenu extends Component {
                                     </NavLink>
                                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/">Home</NavLink>
-                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/About">About</NavLink>
-                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Contact">Contact</NavLink>
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Counter">Counter</NavLink>
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/fetch-data">Fetch data</NavLink>
+                                        <div className="dropdown-divider"></div>
+                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/About">About</NavLink>
+                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Contact">Contact</NavLink>
+                                        <div className="dropdown-divider"></div>
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/ReactRoadMap">ReactRoadMap</NavLink>
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/MapAndKey">MapAndKey</NavLink>
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/CheckBoxWithUseState">CheckBoxWithUseState</NavLink>
