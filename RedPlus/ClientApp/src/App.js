@@ -67,6 +67,7 @@ import { PagerComponent4 } from './components/Pager/PagerComponent4';
 import { PagerComponent6 } from './components/Pager/PagerComponent6';
 import { PagerComponent7 } from './components/Pager/PagerComponent7';
 import { PagerComponent } from './components/Pager/PagerComponent';
+import { PropsFunctionDemo } from './components/Demos/PropsDemo/PropsFunctionDemo';
 
 export default class App extends Component {
     static displayName = App.name;
@@ -104,6 +105,7 @@ export default class App extends Component {
                 <Route path="/ClassNameDemo" component={ClassNameDemo} />
                 <Route path="/MyComponent" component={MyComponent} />
                 <Route path="/PropsDemo" component={PropsDemo} />
+                <Route path="/Demos/PropsFunctionDemo" component={PropsFunctionDemo} />
                 <Route path="/PropsChildrenDemo" component={PropsChildrenDemo} />
                 <Route path='/PropsTypesDemo' component={PropsTypesDemo} />
                 <Route path='/DestructuringAssignmentDemo' component={DestructuringAssignmentDemo} />

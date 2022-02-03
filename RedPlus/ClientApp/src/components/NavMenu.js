@@ -39,7 +39,7 @@ export class NavMenu extends Component {
                                 </NavItem>
                                 <li className="text-dark dropdown">
                                     <NavLink tag={Link} className="text-dark nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        샘플 예제
+                                        샘플 예제 1
                                     </NavLink>
                                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/">Home</NavLink>
@@ -54,6 +54,14 @@ export class NavMenu extends Component {
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/CheckBoxWithUseState">CheckBoxWithUseState</NavLink>
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Pager">Pager Component</NavLink>
                                         <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/SearchBoxTest">SearchBox Component</NavLink>
+                                    </div>
+                                </li>
+                                <li className="text-dark dropdown">
+                                    <NavLink tag={Link} className="text-dark nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        샘플 예제 2
+                                    </NavLink>
+                                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Demos/PropsFunctionDemo">props 데모</NavLink>
                                     </div>
                                 </li>
                                 <li className="text-dark dropdown">
