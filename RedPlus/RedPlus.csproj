@@ -107,6 +107,10 @@
     <Content Include="ClientApp\public\lib\jquery\LICENSE.txt" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RedPlus.Models\RedPlus.Models.csproj" />
+  </ItemGroup>
+
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">

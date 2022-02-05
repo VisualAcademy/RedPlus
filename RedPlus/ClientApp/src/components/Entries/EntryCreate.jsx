@@ -40,7 +40,8 @@ export class EntryCreate extends Component {
 
         let entryDto = {
             name: this.state.name,
-            title: this.state.title,
+            //title: this.state.title,
+            title: this.refs.txtTitle.value, // 학습 목적으로 ref 사용 방법 추가 
             content: this.state.content,
         };
 
@@ -88,6 +89,7 @@ export class EntryCreate extends Component {
                                 <input type="text" className="form-control"
                                     placeholder="Enter Title" value={this.state.title}
                                     onChange={this.handleChageTitle}
+                                    ref="txtTitle"
                                 />
                             </div>
                             <div className="form-group">

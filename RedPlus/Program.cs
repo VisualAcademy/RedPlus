@@ -1,7 +1,7 @@
+using BookApp.Shared;
+using EntryApp.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using RedPlus.Data;
 using RedPlus.Models;
@@ -30,6 +30,16 @@ builder.Services.AddRazorPages();
 builder.Services.Configure<JwtBearerOptions>(
     "IdentityServerJwtBearer", o => o.Authority = "https://localhost:44448");
 
+#region Books, Entries 
+// EntryApp 관련 의존성(종속성) 주입 관련 코드만 따로 모아서 관리 
+builder.Services.AddDependencyInjectionContainerForEntryApp(connectionString);
+
+// BookAppDbContext.cs Inject: New DbContext Add
+builder.Services.AddEntityFrameworkSqlServer().AddDbContext<BookAppDbContext>(options => options.UseSqlServer(connectionString));
+// IBookRepository.cs Inject: DI Container
+builder.Services.AddTransient<IBookRepository, BookRepository>();
+#endregion
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -51,6 +61,7 @@ app.UseAuthentication();
 app.UseIdentityServer();
 app.UseAuthorization();
 
+// app.MapDefaultControllerRoute(); // Web API 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action=Index}/{id?}");
