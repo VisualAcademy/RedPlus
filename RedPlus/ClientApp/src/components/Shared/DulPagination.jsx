@@ -32,7 +32,7 @@ export class DulPagination extends Component {
                 <li className="page-item" key={"first"}>
                     <a href={"first"} className="page-link first btn" onClick={(e) => this.pagerButtonClicked(1, e)}>
                         <span style={{ fontSize: '7pt' }}>FIRST</span></a>
-                </li >
+                </li>
             );
         }
 
@@ -44,7 +44,7 @@ export class DulPagination extends Component {
                     <a href={"prevN"} className="page-link prev btn" onClick={(e) => this.pagerButtonClicked(prevN, e)}>
                         <span style={{ fontSize: '7pt' }}>-{pagerButtonCount}</span>
                     </a>
-                </li >
+                </li>
             );
         }
         else {
@@ -53,7 +53,7 @@ export class DulPagination extends Component {
                     <a href={"prevN"} className="page-link prev btn disabled">
                         <span style={{ fontSize: '7pt' }}>-{pagerButtonCount}</span>
                     </a>
-                </li >
+                </li>
             );
         }
 
@@ -65,14 +65,14 @@ export class DulPagination extends Component {
                     <a href={"prev"} className="page-link prev btn" onClick={(e) => this.pagerButtonClicked(prev, e)}>
                         <span style={{ fontSize: '7pt' }}>PREV</span>
                     </a>
-                </li >
+                </li>
             );
         }
         else {
             pages.push(
                 <li className="page-item" key={"prev"}>
                     <a href={"prev"} className="page-link prev btn disabled"><span style={{ fontSize: '7pt' }}>PREV</span></a>
-                </li >
+                </li>
             );
         }
 
@@ -102,7 +102,7 @@ export class DulPagination extends Component {
                     <li className="page-item" key={currentNumber}>
                         <a href={currentNumber} className="page-link current btn" onClick={(e) => this.pagerButtonClicked(currentNumber, e)}>
                             <span style={{ fontSize: '7pt' }}>{i}</span></a>
-                    </li >
+                    </li>
                 );
             }
         }
@@ -115,14 +115,14 @@ export class DulPagination extends Component {
                     <a href={"next"} className="page-link next btn" onClick={(e) => this.pagerButtonClicked(next, e)}>
                         <span style={{ fontSize: '7pt' }}>NEXT</span>
                     </a>
-                </li >
+                </li>
             );
         }
         else {
             pages.push(
                 <li className="page-item" key={"next"}>
                     <a href={"next"} className="page-link next btn disabled"><span style={{ fontSize: '7pt' }}>NEXT</span></a>
-                </li >
+                </li>
             );
         }
 
@@ -135,7 +135,7 @@ export class DulPagination extends Component {
                     <a href={"nextN"} className="page-link next btn" onClick={(e) => this.pagerButtonClicked(nextN, e)}>
                         <span style={{ fontSize: '7pt' }}>{pagerButtonCount}+</span>
                     </a>
-                </li >
+                </li>
             );
         }
         else {
@@ -144,7 +144,7 @@ export class DulPagination extends Component {
                     <a href={"nextN"} className="page-link next btn disabled">
                         <span style={{ fontSize: '7pt' }}>{pagerButtonCount}+</span>
                     </a>
-                </li >
+                </li>
             );
         }
 
@@ -154,7 +154,7 @@ export class DulPagination extends Component {
                 <li className="page-item" key={"last"}>
                     <a href={"last"} className="page-link last btn" onClick={(e) => this.pagerButtonClicked(pageCount, e)}>
                         <span style={{ fontSize: '7pt' }}>LAST</span></a>
-                </li >
+                </li>
             );
         }
         else {
