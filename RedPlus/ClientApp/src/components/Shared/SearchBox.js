@@ -10,7 +10,7 @@ export class SearchBox extends Component {
         this.sendSearchQuery = this.sendSearchQuery.bind(this); 
     }
     sendSearchQuery() {
-        this.props.searchQueryChanged(this.state.searchQuery); 
+        this.props.searchQueryChanged(this.state.searchQuery); // 부모로 검색어 전달 
     }
     searchHandler = this.debounce(() => {
         //console.log('Child:', this.state.searchQuery); 
