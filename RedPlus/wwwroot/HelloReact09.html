@@ -35,8 +35,8 @@
         }
 
         function BookCardOther(props) {
-            //console.log(props); 
-            console.log(Object.keys(props)); 
+            //console.log(props);
+            console.log(Object.keys(props));
             return (
                 <div className="container mb-2">
                     <div className="row">
@@ -56,7 +56,7 @@
             );
         }
 
-        // 구조 파괴 할당 
+        // 구조 파괴 할당
         function BookCard({ title, description, price }) {
             return (
                 <div className="container mb-2">
@@ -70,7 +70,7 @@
                             {title}
                         </div>
                         <div className="col-10">
-                            {description} 
+                            {description}
                             <hr />
                             { price + '원' }
                         </div>
@@ -82,8 +82,8 @@
         function BookList() {
             return (
                 <>
-                    <BookCard title={seeSharp.title} description={seeSharp.description} price={ 30000 } /> 
-                    <BookCard title="ASP.NET &amp; Core를 다루는 기술" description="ASP.NET &amp; Core를 다루는 기술 책입니다." price={ 55000 } /> 
+                    <BookCard title={seeSharp.title} description={seeSharp.description} price={ 30000 } />
+                    <BookCard title="ASP.NET &amp; Core를 다루는 기술" description="ASP.NET &amp; Core를 다루는 기술 책입니다." price={ 55000 } />
                 </>
             );
         }
@@ -92,16 +92,16 @@
             return (
                 <>
                     <BookTitle />
-                    <BookList /> 
+                    <BookList />
                     <BookFooter />
-                    <Copyright /> 
+                    <Copyright />
                 </>
             );
         }
 
         // 최종 렌더링
         ReactDOM.render(
-            <BookApp />,              
+            <BookApp />,
             document.getElementById("root")
         );
     </script>

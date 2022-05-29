@@ -34,7 +34,7 @@
             return (<p>Copyright &copy;</p>);
         }
 
-        // 구조 파괴 할당 
+        // 구조 파괴 할당
         function BookCard({ title, description, price }) {
             return (
                 <div className="container mb-2">
@@ -48,7 +48,7 @@
                             {title}
                         </div>
                         <div className="col-10">
-                            {description} 
+                            {description}
                             <hr />
                             { price + '원' }
                         </div>
@@ -73,8 +73,8 @@
                                 <button onClick={ () => { this.setState({theme: 'blue'}); } }>Blue 1</button>
                                 <button onClick={ this.blueTheme }>Blue 2</button>
                         </div>
-                        <BookCard title={seeSharp.title} description={seeSharp.description} price={ 30000 } /> 
-                        <BookCard title="ASP.NET &amp; Core를 다루는 기술" description="ASP.NET &amp; Core를 다루는 기술 책입니다." price={ 55000 } /> 
+                        <BookCard title={seeSharp.title} description={seeSharp.description} price={ 30000 } />
+                        <BookCard title="ASP.NET &amp; Core를 다루는 기술" description="ASP.NET &amp; Core를 다루는 기술 책입니다." price={ 55000 } />
                     </>
                 );
             }
@@ -86,9 +86,9 @@
                 return (
                     <>
                         <BookTitle />
-                        <BookList sortOrder="ASC" /> 
+                        <BookList sortOrder="ASC" />
                         <BookFooter />
-                        <Copyright /> 
+                        <Copyright />
                     </>
                 );
             }
@@ -96,7 +96,7 @@
 
         // 최종 렌더링
         ReactDOM.render(
-            <BookApp />,              
+            <BookApp />,
             document.getElementById("root")
         );
     </script>

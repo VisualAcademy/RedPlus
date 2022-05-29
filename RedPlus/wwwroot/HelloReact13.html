@@ -34,7 +34,7 @@
             return (<p>Copyright &copy;</p>);
         }
 
-        // 구조 파괴 할당 
+        // 구조 파괴(분해) 할당
         function BookCard({ title, description, price, content, imageUrl }) {
             return (
                 <div className="container mb-2">
@@ -89,10 +89,10 @@
 
                         {
                             this.props.books.map(book => {
-                                return <BookCard key={book.id} title={book.title} description={book.description} price={ book.price } content={book.content} imageUrl={book.imageUrl} /> 
+                                return <BookCard key={book.id} title={book.title} description={book.description} price={ book.price } content={book.content} imageUrl={book.imageUrl} />
                             })
                         }
-                        
+
                     </>
                 );
             }
@@ -109,9 +109,9 @@
                 return (
                     <>
                         <BookTitle />
-                        <BookList sortOrder="ASC" books={ books } /> 
+                        <BookList sortOrder="ASC" books={ books } />
                         <BookFooter />
-                        <Copyright /> 
+                        <Copyright />
                     </>
                 );
             }
@@ -119,7 +119,7 @@
 
         // 최종 렌더링
         ReactDOM.render(
-            <BookApp />,              
+            <BookApp />,
             document.getElementById("root")
         );
     </script>
