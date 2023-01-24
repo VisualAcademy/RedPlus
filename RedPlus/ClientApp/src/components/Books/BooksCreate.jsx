@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export class BooksCreate extends Component {
+import VisualAcademyRouter from '../VisualAcademyRouter';
+
+class BooksCreate extends Component {
     constructor(props) {
         super(props);
 
@@ -13,9 +15,9 @@ export class BooksCreate extends Component {
 
         //[!] 이벤트 바인딩
         //[1] 함수로 이벤트 처리기 만들고 생성자에서 바인딩
-        this.handleChangeTitle = this.handleChangeTitle.bind(this); 
+        this.handleChangeTitle = this.handleChangeTitle.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.navigateToIndex = this.navigateToIndex.bind(this); 
+        this.navigateToIndex = this.navigateToIndex.bind(this);
 
         //[2] 화살표 함수(람다 식)로 이벤트 핸들러 바인딩
         //this.handleChangeDescription = this.handleChangeDescription.bind(this); 
@@ -29,8 +31,9 @@ export class BooksCreate extends Component {
     }
 
     navigateToIndex() {
-        const { history } = this.props;
-        history.push("/Books");
+        //const { history } = this.props;
+        //history.push("/Books");
+        this.props.navigate("/Books"); // 위 코드 대신에 현재 코드 사용 
     }
 
     handleSubmit(e) {
@@ -90,3 +93,5 @@ export class BooksCreate extends Component {
         );
     }
 }
+
+export default VisualAcademyRouter(BooksCreate);

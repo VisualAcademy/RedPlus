@@ -5,7 +5,9 @@ import axios from 'axios';
 import { DulPagination } from '../Shared/DulPagination';
 import { SearchBox } from '../Shared/SearchBox';
 
-export class EntryIndex extends Component {
+import VisualAcademyRouter from '../VisualAcademyRouter';
+
+class EntryIndex extends Component {
     constructor(props) {
         super(props);
 
@@ -99,7 +101,9 @@ export class EntryIndex extends Component {
     navigateToCreate() {
         //const { history } = this.props;
         //history.push('/Entries/Create'); 
-        this.props.history.push('/Entries/Create');
+        //this.props.history.push('/Entries/Create');
+        //window.location.href = '/Entries/Create'; // 새로고침 형태로 이동
+        this.props.navigate('/Entries/Create'); // 위 코드 대신에 현재 코드 사용 
     }
 
     //[!] Web API로부터 데이터 가져오기 
@@ -165,24 +169,28 @@ export class EntryIndex extends Component {
     }
 
     detailsBy(id) {
-        const { history } = this.props;
-        history.push("/Entries/Details/" + id);
+        //const { history } = this.props;
+        //history.push("/Entries/Details/" + id);
+        this.props.navigate("/Entries/Details/" + id); // 위 코드 대신에 현재 코드 사용 
     }
 
     detailsLink(id, e) {
         e.preventDefault(); // 이벤트 기본 작업 방지: 버튼, 링크 등의 고유 기능을 제거하고 React 기능만 사용
-        const { history } = this.props;
-        history.push("/Entries/Details/" + id);
+        //const { history } = this.props;
+        //history.push("/Entries/Details/" + id);
+        this.props.navigate("/Entries/Details/" + id); // 위 코드 대신에 현재 코드 사용 
     }
 
     editBy(id) {
-        const { history } = this.props;
-        history.push("/Entries/Edit/" + id);
+        //const { history } = this.props;
+        //history.push("/Entries/Edit/" + id);
+        this.props.navigate("/Entries/Edit/" + id); // 위 코드 대신에 현재 코드 사용 
     }
 
     deleteBy(id) {
-        const { history } = this.props;
-        history.push(`/Entries/Delete/${id}`);
+        //const { history } = this.props;
+        //history.push(`/Entries/Delete/${id}`);
+        this.props.navigate(`/Entries/Delete/${id}`); // 위 코드 대신에 현재 코드 사용 
     }
 
     // 학습용 직접 삭제 메서드
@@ -229,3 +237,5 @@ export class EntryIndex extends Component {
         }
     }
 }
+
+export default VisualAcademyRouter(EntryIndex);

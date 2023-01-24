@@ -2,7 +2,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export class EntryEdit extends Component {
+import VisualAcademyRouter from '../VisualAcademyRouter';
+
+class EntryEdit extends Component {
     constructor(props) {
         super(props);
 
@@ -34,7 +36,8 @@ export class EntryEdit extends Component {
     componentDidMount() {
         //[!] id Parameter 받기
         //const id = this.props.match.params["id"]; // 이 방법도 사용 가능
-        const { id } = this.props.match.params;
+        //const { id } = this.props.match.params;
+        const id = this.props.params.id;
 
         //[!] id 값에 해당하는 단일 데이터를 Web API로부터 읽어오기
         axios.get("/api/Entries/" + id).then(response => {
@@ -56,7 +59,8 @@ export class EntryEdit extends Component {
     handleSubmit(e) {
         e.preventDefault(); // 이벤트 기본 작업 방지: 버튼, 링크 등의 고유 기능을 제거하고 React 기능만 사용
 
-        const { id } = this.props.match.params; 
+        //const { id } = this.props.match.params; 
+        const id = this.props.params.id;
 
         let entryDto = {
             //name: this.state.name,
@@ -139,15 +143,19 @@ export class EntryEdit extends Component {
 
     // 리스트 페이지로 이동
     navigateToIndex() {
-        const { history } = this.props;
-        history.push('/Entries');
+        //const { history } = this.props;
+        //history.push('/Entries');
+        this.props.navigate("/Entries"); // 위 코드 대신에 현재 코드 사용 
     }
 
     // 상세보기 페이지로 이동
     navigateToDetails() {
-        const { id } = this.props.match.params;
+        const id = this.props.params.id;
 
-        const { history } = this.props;
-        history.push('/Entries/Details/' + id);
+        //const { history } = this.props;
+        //history.push('/Entries/Details/' + id);
+        this.props.navigate("/Entries/Details/" + id); // 위 코드 대신에 현재 코드 사용 
     }
 }
+
+export default VisualAcademyRouter(EntryEdit);

@@ -2,7 +2,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export class EntryCreate extends Component {
+import VisualAcademyRouter from '../VisualAcademyRouter';
+
+class EntryCreate extends Component {
     constructor(props) {
         super(props);
 
@@ -114,7 +116,10 @@ export class EntryCreate extends Component {
 
     // 리스트 페이지로 이동
     navigateToIndex() {
-        const { history } = this.props;
-        history.push('/Entries');
+        //const { history } = this.props;
+        //history.push('/Entries');
+        this.props.navigate("/Entries"); // 위 코드 대신에 현재 코드 사용 
     }
 }
+
+export default VisualAcademyRouter(EntryCreate);

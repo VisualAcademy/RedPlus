@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export class BooksIndex extends Component {
+import VisualAcademyRouter from '../VisualAcademyRouter';
+
+class BooksIndex extends Component {
     constructor(props) {
         super(props);
 
@@ -57,21 +59,23 @@ export class BooksIndex extends Component {
     }
 
     navigateToCreate() {
-        //console.log("Create");
-        const { history } = this.props;
-        history.push('/Books/Create');
+        //const { history } = this.props;
+        //history.push('/Books/Create'); 
+        this.props.navigate("/Books/Create"); // 위 코드 대신에 현재 코드 사용 
     }
 
     editBy(id) {
-        //console.log("Edit by " + id);
-        const { history } = this.props;
-        history.push("/Books/Edit/" + id);
+        //const { history } = this.props;
+        //history.push("/Books/Edit/" + id);
+        //window.location.href = "/Books/Edit/" + id; // 새로고침 형태로 이동
+        this.props.navigate("/Books/Edit/" + id); // 위 코드 대신에 현재 코드 사용 
     }
 
     deleteBy(id) {
-        //console.log("Delete by " + id);
-        const { history } = this.props;
-        history.push("/Books/Delete/" + id);
+        //const { history } = this.props;
+        //history.push("/Books/Delete/" + id);
+        //window.location.href = "/Books/Delete/" + id; // 새로고침 형태로 이동
+        this.props.navigate("/Books/Delete/" + id); // 위 코드 대신에 현재 코드 사용 
     }
 
     render() {
@@ -113,3 +117,5 @@ export class BooksIndex extends Component {
         }
     }
 }
+
+export default VisualAcademyRouter(BooksIndex);

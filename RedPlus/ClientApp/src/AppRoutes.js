@@ -2,7 +2,7 @@ import { Counter } from "./components/Counter";
 import { FetchData } from "./components/FetchData";
 import { Home } from "./components/Home";
 
-// React Fundamentals 2022
+// React Fundamentals 2023
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { HelloComponent } from './components/Demos/HelloComponent';
@@ -32,12 +32,12 @@ import TodoListInMemory from './components/TodoListInMemory';
 import { PropsTypesDemo } from './components/Demos/PropsTypesDemo/PropsTypesDemo';
 
 // Entries
-import { EntryIndex } from './components/Entries/EntryIndex';
-import { EntryCreate } from './components/Entries/EntryCreate';
-import { EntryDetails } from './components/Entries/EntryDetails';
-import { EntryEdit } from './components/Entries/EntryEdit';
-import { EntryDelete } from './components/Entries/EntryDelete';
-import { EntryList } from './components/Entries/EntryList';
+import EntryIndex from './components/Entries/EntryIndex';
+import EntryCreate from './components/Entries/EntryCreate';
+import EntryDetails from './components/Entries/EntryDetails';
+import EntryEdit from './components/Entries/EntryEdit';
+import EntryDelete from './components/Entries/EntryDelete';
+import EntryList from './components/Entries/EntryList';
 
 // Articles
 import ReactRoadMap from './articles/ReactRoadMap';
@@ -46,10 +46,10 @@ import CheckBoxWithUseState from './articles/CheckBoxWithUseState';
 import { SearchBoxTest } from './articles/SearchBoxTest';
 
 // Books 
-import { BooksIndex } from './components/Books/BooksIndex';
-import { BooksCreate } from './components/Books/BooksCreate';
-import { BooksEdit } from './components/Books/BooksEdit';
-import { BooksDelete } from './components/Books/BooksDelete';
+import BooksIndex from './components/Books/BooksIndex';
+import BooksCreate from './components/Books/BooksCreate';
+import BooksEdit from './components/Books/BooksEdit';
+import BooksDelete from './components/Books/BooksDelete';
 
 // Pager 
 import { PagerComponent1 } from './components/Pager/PagerComponent1';
@@ -79,6 +79,10 @@ const AppRoutes = [
     //{/* Entries */ }
     {
         path: '/Entries',
+        element: <EntryIndex />
+    },
+    {
+        path: '/Entries/Index',
         element: <EntryIndex />
     },
     {
@@ -201,8 +205,6 @@ const AppRoutes = [
         path: '/Ideas',
         element: <Ideas />
     },
-
-
     {
         path: '/InlineStyle',
         element: <InlineStyle />
@@ -242,7 +244,11 @@ const AppRoutes = [
         element: <BooksIndex />
     },
     {
-        path: '/BooksCreate',
+        path: '/Books/Index',
+        element: <BooksIndex />
+    },
+    {
+        path: '/Books/Create',
         element: <BooksCreate />
     },
     {

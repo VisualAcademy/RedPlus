@@ -2,7 +2,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export class EntryDetails extends Component {
+import VisualAcademyRouter from '../VisualAcademyRouter';
+
+class EntryDetails extends Component {
     constructor(props) {
         super(props);
 
@@ -25,7 +27,8 @@ export class EntryDetails extends Component {
     // 페이지 로드, OnInitialized()
     componentDidMount() {
         //[!] id Parameter 받기
-        const { id } = this.props.match.params;
+        //const { id } = this.props.match.params;
+        const id = this.props.params.id;
 
         //[!] id 값에 해당하는 단일 데이터를 Web API로부터 읽어오기
         axios.get("/api/Entries/" + id).then(response => {
@@ -89,23 +92,29 @@ export class EntryDetails extends Component {
 
     // 리스트 페이지로 이동
     navigateToIndex() {
-        const { history } = this.props;
-        history.push('/Entries');
+        //const { history } = this.props;
+        //history.push('/Entries');
+        this.props.navigate("/Entries"); // 위 코드 대신에 현재 코드 사용 
     }
 
     // 삭제 페이지로 이동
     navigateToDelete() {
-        const { id } = this.props.match.params;
+        let id = this.props.params.id;
 
-        const { history } = this.props;
-        history.push('/Entries/Delete/' + id);
+        //const { history } = this.props;
+        //history.push('/Entries/Delete/' + id);
+        this.props.navigate("/Entries/Delete/" + id); // 위 코드 대신에 현재 코드 사용 
     }
 
     // 수정 페이지로 이동
     navigateToEdit() {
-        const { id } = this.props.match.params;
+        let id = this.props.params.id;
 
-        const { history } = this.props;
-        history.push('/Entries/Edit/' + id);
+        //const { history } = this.props;
+        //history.push('/Entries/Edit/' + id);
+        //window.location.href = "/Entries/Edit/" + id; // 이것도 하나의 방법이긴한데 SPA X
+        this.props.navigate("/Entries/Edit/" + id); // 위 코드 대신에 현재 코드 사용 
     }
 }
+
+export default VisualAcademyRouter(EntryDetails);
