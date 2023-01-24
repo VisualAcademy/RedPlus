@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 
-export class BooksDelete extends React.Component {
+import VisualAcademyRouter from '../VisualAcademyRouter';
+
+class BooksDelete extends React.Component {
     constructor(props) {
         super(props);
 
@@ -18,8 +20,10 @@ export class BooksDelete extends React.Component {
     }
 
     componentDidMount() {
-        //[!] id Parameter 받기: 쿼리스트링으로 넘어온 값 받기 
-        const { id } = this.props.match.params;
+        //[!] id Parameter 받기: 쿼리스트링으로 넘어온 값 받기
+        //const { id } = this.props.match.params;
+        //console.log(this.props.match.params);
+        const id = this.props.params.id;
 
         //[!] id 값에 해당하는 단일 데이터를 Web API로부터 읽어오기
         axios.get("/api/Books/" + id).then(response => {
@@ -50,8 +54,9 @@ export class BooksDelete extends React.Component {
     }
 
     navigateToIndex() {
-        const { history } = this.props;
-        history.push("/Books");
+        //const { history } = this.props;
+        //history.push("/Books");
+        this.props.navigate("/Books"); // 위 코드 대신에 현재 코드 사용 
     }
 
     // 삭제 버튼 클릭
@@ -59,7 +64,7 @@ export class BooksDelete extends React.Component {
         e.preventDefault(); // 이벤트 기본 작업 방지: 버튼, 링크 등의 고유 기능을 제거하고 React 기능만 사용
 
         if (window.confirm("정말로 삭제하시겠습니까?")) {
-            const { id } = this.props.match.params;
+            const id = this.props.params.id;
 
             axios.delete("/api/Books/" + id).then(result => {
                 this.navigateToIndex();
@@ -107,3 +112,5 @@ export class BooksDelete extends React.Component {
         );
     }
 }
+
+export default VisualAcademyRouter(BooksDelete);

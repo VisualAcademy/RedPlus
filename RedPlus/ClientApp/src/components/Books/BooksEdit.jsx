@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export class BooksEdit extends Component {
+import VisualAcademyRouter from '../VisualAcademyRouter';
+
+class BooksEdit extends Component {
     constructor(props) {
         super(props);
 
@@ -19,7 +21,7 @@ export class BooksEdit extends Component {
 
     componentDidMount() {
         //[!] id Parameter 받기
-        const { id } = this.props.match.params;
+        const id = this.props.params.id;
 
         //[!] id 값에 해당하는 단일 데이터를 Web API로부터 읽어오기
         axios.get("/api/Books/" + id).then(response => {
@@ -45,14 +47,15 @@ export class BooksEdit extends Component {
     }
 
     navigateToIndex() {
-        const { history } = this.props;
-        history.push("/Books");
+        //const { history } = this.props;
+        //history.push("/Books");
+        this.props.navigate("/Books"); // 위 코드 대신에 현재 코드 사용 
     }
 
     handleSubmit(e) {
         e.preventDefault(); // 이벤트 기본 작업 방지: 버튼, 링크 등의 고유 기능을 제거하고 React 기능만 사용
 
-        const { id } = this.props.match.params;
+        let id = this.props.params.id;
 
         let bookDto = {
             title: this.state.title,
@@ -102,3 +105,5 @@ export class BooksEdit extends Component {
         );
     }
 }
+
+export default VisualAcademyRouter(BooksEdit);
