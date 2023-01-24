@@ -56,6 +56,7 @@ import { PagerComponent1 } from './components/Pager/PagerComponent1';
 import { PagerComponent2 } from './components/Pager/PagerComponent2';
 import { PagerComponent3 } from './components/Pager/PagerComponent3';
 import { PagerComponent4 } from './components/Pager/PagerComponent4';
+import { PagerComponent5 } from './components/Pager/PagerComponent5';
 import { PagerComponent6 } from './components/Pager/PagerComponent6';
 import { PagerComponent7 } from './components/Pager/PagerComponent7';
 import { PagerComponent } from './components/Pager/PagerComponent';
@@ -74,10 +75,8 @@ const AppRoutes = [
         path: '/fetch-data',
         element: <FetchData />
     },
-    {
-        path: '/about',
-        element: <About />
-    },
+
+    //{/* Entries */ }
     {
         path: '/Entries',
         element: <EntryIndex />
@@ -101,6 +100,192 @@ const AppRoutes = [
     {
         path: '/Entries/List',
         element: <EntryList />
+    },
+
+    //{/* Articles */ }
+    {
+        path: '/Articles/ReactRoadMap',
+        element: <ReactRoadMap />
+    },
+    {
+        path: '/Articles/MapAndKey',
+        element: <MapAndKey />
+    },
+    {
+        path: '/Articles/CheckBoxWithUseState',
+        element: <CheckBoxWithUseState />
+    },
+    {
+        path: '/Articles/SearchBoxTest',
+        element: <SearchBoxTest />
+    },
+
+    //{/* React Part 1 */}
+    {
+        path: '/about',
+        element: <About />
+    },
+    {
+        path: '/contact',
+        element: <Contact />
+    },
+    {
+        path: '/UseEffectFetchApi',
+        element: <UseEffectFetchApi />
+    },
+    {
+        path: '/FunctionStateDemo',
+        element: <FunctionStateDemo />
+    },
+    {
+        path: '/UseEffectDemo',
+        element: <UseEffectDemo />
+    },
+    {
+        path: '/hellocomponent',
+        element: <HelloComponent />
+    },
+    {
+        path: '/StyleAttribute',
+        element: <StyleAttribute />
+    },
+    {
+        path: '/ClassNameDemo',
+        element: <ClassNameDemo />
+    },
+    {
+        path: '/MyComponent',
+        element: <MyComponent />
+    },
+    {
+        path: '/PropsDemo',
+        element: <PropsDemo />
+    },
+    {
+        path: '/Demos/PropsFunctionDemo',
+        element: <PropsFunctionDemo />
+    },
+    {
+        path: '/PropsChildrenDemo',
+        element: <PropsChildrenDemo />
+    },
+    {
+        path: '/PropsTypesDemo',
+        element: <PropsTypesDemo />
+    },
+    {
+        path: '/DestructuringAssignmentDemo',
+        element: <DestructuringAssignmentDemo />
+    },
+    {
+        path: '/StateDemo',
+        element: <StateDemo />
+    },
+    {
+        path: '/StateDescription',
+        element: <StateDescription />
+    },
+    {
+        path: '/StateObjectLiteral',
+        element: <StateObjectLiteral />
+    },
+    {
+        path: '/OnClickDemo',
+        element: <OnClickDemo />
+    },
+    {
+        path: '/OnClickEventHandler',
+        element: <OnClickEventHandler />
+    },
+    {
+        path: '/Ideas',
+        element: <Ideas />
+    },
+
+
+    {
+        path: '/InlineStyle',
+        element: <InlineStyle />
+    },
+    {
+        path: '/TodoListInMemory',
+        element: <TodoListInMemory />
+    },
+    {
+        path: '/OneWayBinding',
+        element: <OneWayBinding />
+    },
+    {
+        path: '/MapFunctionDemo',
+        element: <MapFunctionDemo />
+    },
+    {
+        path: '/MapFunctionBookList',
+        element: <MapFunctionBookList />
+    },
+    {
+        path: '/FetchApiPractice',
+        element: <FetchApiPractice />
+    },
+    {
+        path: '/TextBoxOnChangeEventHandler',
+        element: <TextBoxOnChangeEventHandler />
+    },
+    {
+        path: '/ReactFragmentDemo',
+        element: <ReactFragmentDemo />
+    },
+
+    //{/* Books */}
+    {
+        path: '/Books',
+        element: <BooksIndex />
+    },
+    {
+        path: '/BooksCreate',
+        element: <BooksCreate />
+    },
+    {
+        path: '/Books/Edit/:id',
+        element: <BooksEdit />
+    },
+    {
+        path: '/Books/Delete/:id',
+        element: <BooksDelete />
+    },
+
+    //{/* Pager */}
+    {
+        path: '/pager1',
+        element: <PagerComponent1 />
+    },
+    {
+        path: '/pager2',
+        element: <PagerComponent2 />
+    },
+    {
+        path: '/pager3',
+        element: <PagerComponent3 />
+    },
+    {
+        path: '/pager4',
+        element: <PagerComponent4 />
+    },
+    {
+        path: '/pager5',
+        element: <PagerComponent5 />
+    },
+    {
+        path: '/pager6',
+        element: <PagerComponent6 />
+    },
+    {
+        path: '/pager7',
+        element: <PagerComponent7 />
+    },
+    {
+        path: '/pager',
+        element: <PagerComponent />
     }
 ];
 
