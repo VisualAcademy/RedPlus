@@ -25,6 +25,10 @@ https://www.youtube.com/playlist?list=PLO56HZSjrPTCvOPsFCgD14BBQ0z3tvDLk
 
 ## 버전
 
+닷넷 6.0 버전 프로젝트는 다음 경로에 있습니다. 
+
+https://github.com/VisualAcademy/RedPlus.V6
+
 닷넷 코어 3.1 ~ 닷넷 5.0 버전의 RedPlus 프로젝트는 다음 경로에 있습니다.
 
 https://github.com/VisualAcademy/RedPlus.V31
