@@ -58,6 +58,7 @@ export class NavMenu extends Component {
                                     <div className="dropdown-divider"></div>
                                     <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/ReactRoadMap">ReactRoadMap</NavLink>
                                     <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/MapAndKey">MapAndKey</NavLink>
+                                    <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/UseStateDemo">UseStateDemo</NavLink>
                                     <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/CheckBoxWithUseState">CheckBoxWithUseState</NavLink>
                                     <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Pager">Pager Component</NavLink>
                                     <NavLink tag={Link} className="nav-link text-dark dropdown-item" to="/Articles/SearchBoxTest">SearchBox Component</NavLink>

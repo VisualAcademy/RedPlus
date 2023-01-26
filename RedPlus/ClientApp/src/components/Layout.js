@@ -14,8 +14,8 @@ export class Layout extends Component {
                         {this.props.children}
                     </Container>
                 </div>
-                <footer class="border-top footer text-muted text-center">
-                    <div class="container">
+                <footer className="border-top footer text-muted text-center">
+                    <div className="container">
                     &copy; 2023 - VisualAcademy - <a href="#">Privacy</a>
                     </div>
                 </footer>

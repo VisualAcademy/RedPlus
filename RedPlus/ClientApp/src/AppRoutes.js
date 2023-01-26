@@ -42,6 +42,7 @@ import EntryList from './components/Entries/EntryList';
 // Articles
 import ReactRoadMap from './articles/ReactRoadMap';
 import MapAndKey from './articles/MapAndKey';
+import UseStateDemo from './articles/UseStateDemo';
 import CheckBoxWithUseState from './articles/CheckBoxWithUseState';
 import { SearchBoxTest } from './articles/SearchBoxTest';
 
@@ -114,6 +115,10 @@ const AppRoutes = [
     {
         path: '/Articles/MapAndKey',
         element: <MapAndKey />
+    },
+    {
+        path: '/Articles/UseStateDemo',
+        element: <UseStateDemo />
     },
     {
         path: '/Articles/CheckBoxWithUseState',
