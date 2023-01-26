@@ -18,8 +18,12 @@ function UseStateDemo() {
         <>
             <h1>useState를 사용한 React.js 상태 데이터 관리</h1>
 
-            <button onClick={ () => setMethod("새로운 문자열") }>새로운 문자열로 설정</button>
-            <button onClick={() => setMethod("또 다른 문자열")}>또 다른 문자열로 설정</button>
+            <button onClick={() => setMethod("새로운 문자열")}>
+                새로운 문자열로 설정
+            </button>
+            <button onClick={() => setMethod("또 다른 문자열")}>
+                또 다른 문자열로 설정
+            </button>
         </>
     );
 }
