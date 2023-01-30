@@ -28,7 +28,7 @@ class EntryDetails extends Component {
     componentDidMount() {
         //[!] id Parameter 받기
         //const { id } = this.props.match.params;
-        const id = this.props.params.id;
+        const id = this.props.params.id; // React Router v6
 
         //[!] id 값에 해당하는 단일 데이터를 Web API로부터 읽어오기
         axios.get("/api/Entries/" + id).then(response => {
